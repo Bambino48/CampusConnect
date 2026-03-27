@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CampusConnect | Accueil</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+</head>
+
+<body>
+    <header class="header">
+        <div class="container navbar">
+            <a href="index.html" class="logo">CampusConnect</a>
+
+            <nav class="nav" id="navMenu">
+                <a href="index.html">Accueil</a>
+                <a href="events.html">Événements</a>
+                <a href="contact.html">Inscription</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button id="themeToggle" class="btn btn-secondary">Mode</button>
+                <button id="menuToggle" class="menu-toggle">Menu</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <span class="tag">Événements académiques</span>
+                    <h1>Connecter les étudiants aux meilleures opportunités du campus</h1>
+                    <p>
+                        Découvrez des conférences, ateliers, hackathons et journées portes ouvertes
+                        dans une expérience moderne, interactive et professionnelle.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="events.html" class="btn btn-primary">Découvrir les événements</a>
+                        <a href="contact.html" class="btn btn-secondary">S’inscrire</a>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="hero-card">Conférences</div>
+                    <div class="hero-card">Ateliers</div>
+                    <div class="hero-card">Hackathons</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats section">
+            <div class="container stats-grid">
+                <div class="stat-card">
+                    <h2 class="counter" data-target="120">0</h2>
+                    <p>Participants</p>
+                </div>
+                <div class="stat-card">
+                    <h2 class="counter" data-target="25">0</h2>
+                    <p>Intervenants</p>
+                </div>
+                <div class="stat-card">
+                    <h2 class="counter" data-target="18">0</h2>
+                    <p>Événements</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-events section">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="tag">En vedette</span>
+                    <h2>Événements à ne pas manquer</h2>
+                </div>
+
+                <div class="events-grid" id="featuredEvents">
+                    <!-- Injecté en JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <section class="benefits section">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="tag">Pourquoi participer ?</span>
+                    <h2>Un espace pour apprendre, échanger et évoluer</h2>
+                </div>
+
+                <div class="benefits-grid">
+                    <article class="benefit-card">
+                        <h3>Réseautage</h3>
+                        <p>Rencontrez étudiants, professeurs et professionnels.</p>
+                    </article>
+                    <article class="benefit-card">
+                        <h3>Compétences</h3>
+                        <p>Développez vos connaissances dans des ateliers concrets.</p>
+                    </article>
+                    <article class="benefit-card">
+                        <h3>Opportunités</h3>
+                        <p>Accédez à des projets, concours et événements marquants.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials section">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="tag">Témoignages</span>
+                    <h2>Ce que disent les participants</h2>
+                </div>
+
+                <div class="carousel">
+                    <button class="carousel-btn" id="prevSlide">←</button>
+                    <div class="carousel-track" id="testimonialTrack">
+                        <article class="testimonial-card active">
+                            <p>"Une expérience enrichissante et très bien organisée."</p>
+                            <h3>Amina, Étudiante</h3>
+                        </article>
+                        <article class="testimonial-card">
+                            <p>"Le meilleur moyen de découvrir des opportunités académiques."</p>
+                            <h3>Yao, Participant</h3>
+                        </article>
+                        <article class="testimonial-card">
+                            <p>"Une interface claire et moderne pour suivre les événements."</p>
+                            <h3>Sonia, Organisatrice</h3>
+                        </article>
+                    </div>
+                    <button class="carousel-btn" id="nextSlide">→</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq section">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="tag">FAQ</span>
+                    <h2>Questions fréquentes</h2>
+                </div>
+
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-question">Comment s’inscrire à un événement ?</button>
+                        <div class="faq-answer">
+                            <p>Choisissez un événement puis remplissez le formulaire d’inscription.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">Les événements sont-ils gratuits ?</button>
+                        <div class="faq-answer">
+                            <p>La majorité des événements académiques proposés sont gratuits.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">Puis-je enregistrer mes favoris ?</button>
+                        <div class="faq-answer">
+                            <p>Oui, grâce au `localStorage`, vos choix peuvent être conservés.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta section">
+            <div class="container cta-box">
+                <h2>Prêt à rejoindre le prochain événement ?</h2>
+                <a href="contact.html" class="btn btn-primary">Je m’inscris maintenant</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div>
+                <h3>CampusConnect</h3>
+                <p>Plateforme académique moderne dédiée aux événements universitaires.</p>
+            </div>
+            <div>
+                <h4>Navigation</h4>
+                <a href="index.html">Accueil</a>
+                <a href="events.html">Événements</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div>
+                <h4>Contact</h4>
+                <p>Email : contact@campusconnect.com</p>
+            </div>
+        </div>
+    </footer>
+
+    <button id="backToTop" class="back-to-top">↑</button>
+
+    <script src="js/data.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
