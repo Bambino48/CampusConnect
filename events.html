@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CampusConnect | Événements</title>
+    <meta name="description"
+        content="Catalogue premium des événements académiques de CampusConnect avec filtres, tri, favoris et modal.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -43,17 +45,45 @@
         <section class="page-banner">
             <div class="container banner-content reveal">
                 <span class="eyebrow">Catalogue interactif</span>
-                <h1>Trouver un événement adapté à son profil</h1>
-                <p>Recherche, filtres, tri et modal de détail pour pratiquer la manipulation du DOM.</p>
+                <h1>Trouver un événement adapté à son ambition académique</h1>
+                <p>
+                    Recherche, filtres, tri, favoris et détail en modal. Cette page est pensée pour
+                    démontrer une vraie maîtrise du DOM et d'une interface orientée expérience utilisateur.
+                </p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="cta-panel reveal">
+                    <div>
+                        <span class="eyebrow">Expérience utilisateur</span>
+                        <h2>Une liste vivante, filtrable et utile</h2>
+                        <p>
+                            Chaque carte est générée depuis JavaScript, ce qui permet d'ajouter facilement
+                            de nouveaux événements, d'améliorer le tri et de faire évoluer le projet.
+                        </p>
+                    </div>
+                    <a class="btn btn-primary" href="contact.html">S'inscrire maintenant</a>
+                </div>
             </div>
         </section>
 
         <section class="section section-muted">
             <div class="container">
+                <div class="section-heading reveal">
+                    <span class="eyebrow">Navigation rapide</span>
+                    <h2>Filtrer, comparer et découvrir les meilleurs temps forts du campus</h2>
+                    <p>
+                        Utilise les champs ci-dessous pour tester la recherche dynamique, le tri alphabétique
+                        ou chronologique et les filtres par catégorie.
+                    </p>
+                </div>
+
                 <div class="filter-panel reveal">
                     <div class="filter-search">
                         <label for="searchInput">Recherche</label>
-                        <input id="searchInput" type="search" placeholder="Exemple : IA, design, hackathon">
+                        <input id="searchInput" type="search" placeholder="Exemple : IA, design, forum, cybersécurité">
                     </div>
 
                     <div class="filter-search">
@@ -81,6 +111,32 @@
                 <div class="event-grid" id="eventsContainer"></div>
             </div>
         </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <span class="eyebrow">Ce que montre cette page</span>
+                    <h2>Une démonstration front-end crédible pour un portfolio</h2>
+                </div>
+
+                <div class="feature-grid">
+                    <article class="feature-card reveal">
+                        <h3>Rendu dynamique</h3>
+                        <p>Les cartes sont injectées dans le DOM à partir d'un tableau d'objets JavaScript.</p>
+                    </article>
+                    <article class="feature-card reveal">
+                        <h3>Logique interactive</h3>
+                        <p>Recherche instantanée, filtres, tri, favoris et modal apportent une vraie profondeur
+                            fonctionnelle.</p>
+                    </article>
+                    <article class="feature-card reveal">
+                        <h3>Présentation premium</h3>
+                        <p>Le design, les espacements et la hiérarchie visuelle rendent le projet plus professionnel.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
     </main>
 
     <div class="modal" id="eventModal" aria-hidden="true">
@@ -94,15 +150,18 @@
         <div class="container footer-grid">
             <div>
                 <h3>CampusConnect</h3>
-                <p>Une base de projet front-end réaliste pour le portfolio.</p>
+                <p>Catalogue événementiel académique conçu comme une étude de cas front-end premium.</p>
             </div>
+
             <div>
-                <h4>Aller plus loin</h4>
-                <a href="contact.html">Tester le formulaire</a>
+                <h4>Pages</h4>
+                <a href="index.html">Accueil</a>
+                <a href="contact.html">Inscription</a>
             </div>
+
             <div>
-                <h4>Exercices</h4>
-                <p>Ajouter pagination, favoris et tri avancé.</p>
+                <h4>Focus technique</h4>
+                <p>DOM, filtres, tri, modal, favoris et responsive design.</p>
             </div>
         </div>
     </footer>

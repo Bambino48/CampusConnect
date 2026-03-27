@@ -21,13 +21,17 @@ document.addEventListener("DOMContentLoaded", function initSharedUi() {
 
         return [
             '<article class="event-card reveal is-visible">',
+            '<div class="event-topline">',
             '<span class="event-badge">' + window.CampusConnectData.getCategoryLabel(eventItem.category) + "</span>",
+            '<span class="event-date-pill">' + window.CampusConnectData.formatEventDate(eventItem.date) + "</span>",
+            "</div>",
             "<h3>" + eventItem.title + "</h3>",
             "<p>" + eventItem.description + "</p>",
             '<div class="event-meta">',
-            "<span>" + window.CampusConnectData.formatEventDate(eventItem.date) + "</span>",
             "<span>" + eventItem.location + "</span>",
+            "<span>" + eventItem.attendees + " participants</span>",
             "</div>",
+            '<div class="event-speaker">Intervenant : <strong>' + eventItem.speaker + "</strong></div>",
             '<div class="event-actions">',
             '<a class="ghost-link" href="events.html">Voir la liste</a>',
             '<button class="' + (isFavorite ? "event-favorite is-favorite" : "event-favorite") + '" type="button" disabled>' + (isFavorite ? "♥" : "♡") + "</button>",
