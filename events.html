@@ -2,86 +2,116 @@
 <html lang="fr">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CampusConnect | Événements</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/responsive.css" />
-    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Outfit:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 
 <body>
-    <header class="header">
-        <div class="container navbar">
-            <a href="index.html" class="logo">CampusConnect</a>
-            <nav class="nav" id="navMenu">
+    <header class="site-header">
+        <div class="container nav-shell">
+            <a class="brand" href="index.html">
+                <span class="brand-mark">C</span>
+                <span class="brand-text">CampusConnect</span>
+            </a>
+
+            <button class="menu-toggle" id="menuToggle" type="button" aria-label="Ouvrir le menu">
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="site-nav" id="siteNav">
                 <a href="index.html">Accueil</a>
-                <a href="events.html">Événements</a>
+                <a href="events.html" class="active">Événements</a>
                 <a href="contact.html">Inscription</a>
+                <button class="theme-toggle" id="themeToggle" type="button" aria-label="Changer le thème">
+                    Theme
+                </button>
             </nav>
-            <div class="nav-actions">
-                <button id="themeToggle" class="btn btn-secondary">Mode</button>
-                <button id="menuToggle" class="menu-toggle">Menu</button>
-            </div>
         </div>
     </header>
 
     <main>
-        <section class="page-hero">
-            <div class="container">
-                <span class="tag">Catalogue</span>
-                <h1>Explorer les événements</h1>
-                <p>Trouvez rapidement les activités qui correspondent à votre profil.</p>
+        <section class="page-banner">
+            <div class="container banner-content reveal">
+                <span class="eyebrow">Catalogue interactif</span>
+                <h1>Trouver un événement adapté à son profil</h1>
+                <p>Recherche, filtres, tri et modal de détail pour pratiquer la manipulation du DOM.</p>
             </div>
         </section>
 
-        <section class="filters section">
+        <section class="section section-muted">
             <div class="container">
-                <div class="filter-bar">
-                    <input type="text" id="searchInput" placeholder="Rechercher un événement..." />
-                    <select id="sortSelect">
-                        <option value="default">Trier par</option>
-                        <option value="date">Date</option>
-                        <option value="title">Titre</option>
-                    </select>
+                <div class="filter-panel reveal">
+                    <div class="filter-search">
+                        <label for="searchInput">Recherche</label>
+                        <input id="searchInput" type="search" placeholder="Exemple : IA, design, hackathon">
+                    </div>
+
+                    <div class="filter-search">
+                        <label for="sortSelect">Trier par</label>
+                        <select id="sortSelect">
+                            <option value="featured">Sélection éditoriale</option>
+                            <option value="date">Date</option>
+                            <option value="title">Titre</option>
+                        </select>
+                    </div>
                 </div>
 
-                <div class="filter-buttons">
-                    <button class="filter-btn active" data-category="all">Tous</button>
-                    <button class="filter-btn" data-category="conference">Conférences</button>
-                    <button class="filter-btn" data-category="atelier">Ateliers</button>
-                    <button class="filter-btn" data-category="hackathon">Hackathons</button>
+                <div class="chip-group reveal">
+                    <button class="chip active" type="button" data-category="all">Tout</button>
+                    <button class="chip" type="button" data-category="conference">Conférences</button>
+                    <button class="chip" type="button" data-category="atelier">Ateliers</button>
+                    <button class="chip" type="button" data-category="hackathon">Hackathons</button>
+                    <button class="chip" type="button" data-category="forum">Forums</button>
                 </div>
-            </div>
-        </section>
 
-        <section class="events-list section">
-            <div class="container">
-                <div class="events-grid" id="eventsContainer">
-                    <!-- Injecté en JavaScript -->
+                <div class="results-bar reveal">
+                    <p id="resultsCount">0 événement</p>
                 </div>
+
+                <div class="event-grid" id="eventsContainer"></div>
             </div>
         </section>
     </main>
 
-    <div class="modal" id="eventModal">
-        <div class="modal-content">
-            <button class="modal-close" id="closeModal">×</button>
-            <div id="modalBody">
-                <!-- Détail injecté en JavaScript -->
-            </div>
+    <div class="modal" id="eventModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <button class="modal-close" id="closeModal" type="button" aria-label="Fermer">×</button>
+            <div id="modalBody"></div>
         </div>
     </div>
 
-    <footer class="footer">
-        <div class="container footer-content">
-            <p>CampusConnect © 2026</p>
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div>
+                <h3>CampusConnect</h3>
+                <p>Une base de projet front-end réaliste pour le portfolio.</p>
+            </div>
+            <div>
+                <h4>Aller plus loin</h4>
+                <a href="contact.html">Tester le formulaire</a>
+            </div>
+            <div>
+                <h4>Exercices</h4>
+                <p>Ajouter pagination, favoris et tri avancé.</p>
+            </div>
         </div>
     </footer>
 
+    <button class="back-to-top" id="backToTop" type="button" aria-label="Retour en haut">↑</button>
+
     <script src="js/data.js"></script>
-    <script src="js/modal.js"></script>
     <script src="js/theme.js"></script>
+    <script src="js/modal.js"></script>
     <script src="js/events.js"></script>
     <script src="js/main.js"></script>
 </body>

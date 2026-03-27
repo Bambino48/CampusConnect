@@ -2,202 +2,245 @@
 <html lang="fr">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CampusConnect | Accueil</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/responsive.css" />
-    <link rel="stylesheet" href="css/animations.css" />
+    <meta name="description"
+        content="CampusConnect, une plateforme vitrine pour découvrir et rejoindre des événements académiques.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Outfit:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 
 <body>
-    <header class="header">
-        <div class="container navbar">
-            <a href="index.html" class="logo">CampusConnect</a>
+    <header class="site-header">
+        <div class="container nav-shell">
+            <a class="brand" href="index.html">
+                <span class="brand-mark">C</span>
+                <span class="brand-text">CampusConnect</span>
+            </a>
 
-            <nav class="nav" id="navMenu">
-                <a href="index.html">Accueil</a>
+            <button class="menu-toggle" id="menuToggle" type="button" aria-label="Ouvrir le menu">
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="site-nav" id="siteNav">
+                <a href="index.html" class="active">Accueil</a>
                 <a href="events.html">Événements</a>
                 <a href="contact.html">Inscription</a>
+                <button class="theme-toggle" id="themeToggle" type="button" aria-label="Changer le thème">
+                    Theme
+                </button>
             </nav>
-
-            <div class="nav-actions">
-                <button id="themeToggle" class="btn btn-secondary">Mode</button>
-                <button id="menuToggle" class="menu-toggle">Menu</button>
-            </div>
         </div>
     </header>
 
     <main>
         <section class="hero">
-            <div class="container hero-content">
-                <div class="hero-text">
-                    <span class="tag">Événements académiques</span>
-                    <h1>Connecter les étudiants aux meilleures opportunités du campus</h1>
+            <div class="hero-orb hero-orb-left"></div>
+            <div class="hero-orb hero-orb-right"></div>
+
+            <div class="container hero-grid">
+                <div class="hero-copy reveal">
+                    <span class="eyebrow">Plateforme académique moderne</span>
+                    <h1>Donner de la visibilité aux événements qui comptent sur le campus</h1>
                     <p>
-                        Découvrez des conférences, ateliers, hackathons et journées portes ouvertes
-                        dans une expérience moderne, interactive et professionnelle.
+                        Conférences, ateliers, hackathons et rencontres professionnelles dans une interface
+                        pensée pour informer, convaincre et faire passer à l'action.
                     </p>
-                    <div class="hero-buttons">
-                        <a href="events.html" class="btn btn-primary">Découvrir les événements</a>
-                        <a href="contact.html" class="btn btn-secondary">S’inscrire</a>
+
+                    <div class="hero-actions">
+                        <a class="btn btn-primary" href="events.html">Explorer les événements</a>
+                        <a class="btn btn-secondary" href="contact.html">Réserver une place</a>
+                    </div>
+
+                    <div class="hero-metrics">
+                        <div>
+                            <strong class="counter" data-target="18">0</strong>
+                            <span>événements planifiés</span>
+                        </div>
+                        <div>
+                            <strong class="counter" data-target="12">0</strong>
+                            <span>experts invités</span>
+                        </div>
+                        <div>
+                            <strong class="counter" data-target="320">0</strong>
+                            <span>participants attendus</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="hero-visual">
-                    <div class="hero-card">Conférences</div>
-                    <div class="hero-card">Ateliers</div>
-                    <div class="hero-card">Hackathons</div>
+                <div class="hero-panel reveal">
+                    <div class="hero-surface">
+                        <div class="status-chip">
+                            <span class="status-dot"></span>
+                            Inscriptions ouvertes
+                        </div>
+
+                        <div class="surface-card surface-card-primary">
+                            <span>Conférence phare</span>
+                            <h2>Data & IA responsable</h2>
+                            <p>Un programme clair, des intervenants experts et une expérience soignée.</p>
+                        </div>
+
+                        <div class="surface-stack">
+                            <div class="surface-card">
+                                <span>Atelier pratique</span>
+                                <h3>UI Web Portfolio</h3>
+                            </div>
+                            <div class="surface-card">
+                                <span>Temps fort</span>
+                                <h3>Hackathon Campus</h3>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="stats section">
-            <div class="container stats-grid">
-                <div class="stat-card">
-                    <h2 class="counter" data-target="120">0</h2>
-                    <p>Participants</p>
-                </div>
-                <div class="stat-card">
-                    <h2 class="counter" data-target="25">0</h2>
-                    <p>Intervenants</p>
-                </div>
-                <div class="stat-card">
-                    <h2 class="counter" data-target="18">0</h2>
-                    <p>Événements</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="featured-events section">
+        <section class="section section-muted">
             <div class="container">
-                <div class="section-heading">
-                    <span class="tag">En vedette</span>
-                    <h2>Événements à ne pas manquer</h2>
+                <div class="section-heading reveal">
+                    <span class="eyebrow">En vedette</span>
+                    <h2>Une sélection d'événements conçue pour capter l'attention</h2>
+                    <p>Les cartes ci-dessous sont générées dynamiquement en JavaScript depuis un tableau d'objets.</p>
                 </div>
 
-                <div class="events-grid" id="featuredEvents">
-                    <!-- Injecté en JavaScript -->
+                <div class="event-grid" id="featuredEvents"></div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <span class="eyebrow">Pourquoi ce projet est pertinent</span>
+                    <h2>Un seul sujet pour apprendre plusieurs briques du front-end</h2>
+                </div>
+
+                <div class="feature-grid">
+                    <article class="feature-card reveal">
+                        <h3>Structure HTML</h3>
+                        <p>Sections sémantiques, navigation, cartes, formulaire, FAQ et modal.</p>
+                    </article>
+                    <article class="feature-card reveal">
+                        <h3>Style CSS</h3>
+                        <p>Variables, responsive design, grid, glassmorphism léger et composants réutilisables.</p>
+                    </article>
+                    <article class="feature-card reveal">
+                        <h3>Interactions JS</h3>
+                        <p>DOM, filtres, tri, thème, compteur animé, accordéon, carousel et localStorage.</p>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <section class="benefits section">
+        <section class="section section-accent">
             <div class="container">
-                <div class="section-heading">
-                    <span class="tag">Pourquoi participer ?</span>
-                    <h2>Un espace pour apprendre, échanger et évoluer</h2>
+                <div class="section-heading reveal">
+                    <span class="eyebrow">Témoignages</span>
+                    <h2>Un carousel simple pour apprendre la logique de navigation</h2>
                 </div>
 
-                <div class="benefits-grid">
-                    <article class="benefit-card">
-                        <h3>Réseautage</h3>
-                        <p>Rencontrez étudiants, professeurs et professionnels.</p>
-                    </article>
-                    <article class="benefit-card">
-                        <h3>Compétences</h3>
-                        <p>Développez vos connaissances dans des ateliers concrets.</p>
-                    </article>
-                    <article class="benefit-card">
-                        <h3>Opportunités</h3>
-                        <p>Accédez à des projets, concours et événements marquants.</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section class="testimonials section">
-            <div class="container">
-                <div class="section-heading">
-                    <span class="tag">Témoignages</span>
-                    <h2>Ce que disent les participants</h2>
-                </div>
-
-                <div class="carousel">
-                    <button class="carousel-btn" id="prevSlide">←</button>
+                <div class="carousel reveal" aria-label="Témoignages">
+                    <button class="carousel-button" id="prevSlide" type="button" aria-label="Slide précédent">←</button>
                     <div class="carousel-track" id="testimonialTrack">
                         <article class="testimonial-card active">
-                            <p>"Une expérience enrichissante et très bien organisée."</p>
-                            <h3>Amina, Étudiante</h3>
+                            <p>"Le projet montre une vraie compréhension du DOM et de l'expérience utilisateur."</p>
+                            <strong>Aïcha, tutrice web</strong>
                         </article>
                         <article class="testimonial-card">
-                            <p>"Le meilleur moyen de découvrir des opportunités académiques."</p>
-                            <h3>Yao, Participant</h3>
+                            <p>"Le design est moderne, et les animations servent vraiment le contenu."</p>
+                            <strong>Koffi, étudiant développeur</strong>
                         </article>
                         <article class="testimonial-card">
-                            <p>"Une interface claire et moderne pour suivre les événements."</p>
-                            <h3>Sonia, Organisatrice</h3>
+                            <p>"C'est un excellent sujet de portfolio parce qu'il ressemble à une vraie commande."</p>
+                            <strong>Nina, responsable pédagogique</strong>
                         </article>
                     </div>
-                    <button class="carousel-btn" id="nextSlide">→</button>
+                    <button class="carousel-button" id="nextSlide" type="button" aria-label="Slide suivant">→</button>
                 </div>
             </div>
         </section>
 
-        <section class="faq section">
-            <div class="container">
-                <div class="section-heading">
-                    <span class="tag">FAQ</span>
-                    <h2>Questions fréquentes</h2>
+        <section class="section">
+            <div class="container faq-layout">
+                <div class="section-heading reveal">
+                    <span class="eyebrow">Questions fréquentes</span>
+                    <h2>Une FAQ utile pour travailler les interactions d'interface</h2>
                 </div>
 
                 <div class="faq-list">
-                    <div class="faq-item">
-                        <button class="faq-question">Comment s’inscrire à un événement ?</button>
+                    <article class="faq-item reveal">
+                        <button class="faq-question" type="button">Comment les cartes sont-elles affichées ?</button>
                         <div class="faq-answer">
-                            <p>Choisissez un événement puis remplissez le formulaire d’inscription.</p>
+                            <p>Les événements sont stockés dans un tableau JavaScript puis injectés dans le DOM.</p>
                         </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button class="faq-question">Les événements sont-ils gratuits ?</button>
+                    </article>
+                    <article class="faq-item reveal">
+                        <button class="faq-question" type="button">Pourquoi ajouter un mode sombre ?</button>
                         <div class="faq-answer">
-                            <p>La majorité des événements académiques proposés sont gratuits.</p>
+                            <p>Parce qu'il permet de manipuler des variables CSS et de persister une préférence avec
+                                localStorage.</p>
                         </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button class="faq-question">Puis-je enregistrer mes favoris ?</button>
+                    </article>
+                    <article class="faq-item reveal">
+                        <button class="faq-question" type="button">Pourquoi ce projet est bon pour un portfolio
+                            ?</button>
                         <div class="faq-answer">
-                            <p>Oui, grâce au `localStorage`, vos choix peuvent être conservés.</p>
+                            <p>Il montre un ensemble cohérent de compétences front-end dans un contexte crédible et
+                                professionnel.</p>
                         </div>
-                    </div>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <section class="cta section">
-            <div class="container cta-box">
-                <h2>Prêt à rejoindre le prochain événement ?</h2>
-                <a href="contact.html" class="btn btn-primary">Je m’inscris maintenant</a>
+        <section class="section">
+            <div class="container">
+                <div class="cta-panel reveal">
+                    <div>
+                        <span class="eyebrow">Prêt à poursuivre</span>
+                        <h2>La base HTML, CSS et JavaScript est en place</h2>
+                        <p>Tu peux maintenant styliser davantage, enrichir les données et publier le projet dans ton
+                            portfolio.</p>
+                    </div>
+                    <a class="btn btn-primary" href="contact.html">Tester le formulaire</a>
+                </div>
             </div>
         </section>
     </main>
 
-    <footer class="footer">
-        <div class="container footer-content">
+    <footer class="site-footer">
+        <div class="container footer-grid">
             <div>
                 <h3>CampusConnect</h3>
-                <p>Plateforme académique moderne dédiée aux événements universitaires.</p>
+                <p>Projet académique front-end complet pour démontrer HTML, CSS, JavaScript et UI moderne.</p>
             </div>
             <div>
                 <h4>Navigation</h4>
                 <a href="index.html">Accueil</a>
                 <a href="events.html">Événements</a>
-                <a href="contact.html">Contact</a>
+                <a href="contact.html">Inscription</a>
             </div>
             <div>
                 <h4>Contact</h4>
-                <p>Email : contact@campusconnect.com</p>
+                <p>contact@campusconnect.ac</p>
+                <p>Abidjan Campus Hub</p>
             </div>
         </div>
     </footer>
 
-    <button id="backToTop" class="back-to-top">↑</button>
+    <button class="back-to-top" id="backToTop" type="button" aria-label="Retour en haut">↑</button>
 
     <script src="js/data.js"></script>
-    <script src="js/carousel.js"></script>
     <script src="js/theme.js"></script>
+    <script src="js/carousel.js"></script>
     <script src="js/main.js"></script>
 </body>
 

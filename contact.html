@@ -1,99 +1,135 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CampusConnect | Inscription</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/responsive.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CampusConnect | Inscription</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Outfit:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
 </head>
-
 <body>
-    <header class="header">
-        <div class="container navbar">
-            <a href="index.html" class="logo">CampusConnect</a>
-            <nav class="nav" id="navMenu">
-                <a href="index.html">Accueil</a>
-                <a href="events.html">Événements</a>
-                <a href="contact.html">Inscription</a>
-            </nav>
-            <div class="nav-actions">
-                <button id="themeToggle" class="btn btn-secondary">Mode</button>
-                <button id="menuToggle" class="menu-toggle">Menu</button>
+  <header class="site-header">
+    <div class="container nav-shell">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">C</span>
+        <span class="brand-text">CampusConnect</span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Ouvrir le menu">
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="site-nav" id="siteNav">
+        <a href="index.html">Accueil</a>
+        <a href="events.html">Événements</a>
+        <a href="contact.html" class="active">Inscription</a>
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Changer le thème">
+          Theme
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-banner">
+      <div class="container banner-content reveal">
+        <span class="eyebrow">Formulaire académique</span>
+        <h1>Réserver sa participation à un événement</h1>
+        <p>Validation JavaScript, messages d'erreur, persistance locale et retour visuel.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container contact-layout">
+        <aside class="contact-panel reveal">
+          <span class="eyebrow">Informations utiles</span>
+          <h2>Un bloc secondaire pour travailler la composition d'interface</h2>
+          <ul class="contact-points">
+            <li>Email : contact@campusconnect.ac</li>
+            <li>Téléphone : +225 07 00 00 00 00</li>
+            <li>Lieu : Centre d'innovation universitaire</li>
+            <li>Horaires : 08h30 - 18h00</li>
+          </ul>
+        </aside>
+
+        <form class="form-card reveal" id="registrationForm" novalidate>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="fullname">Nom complet</label>
+              <input id="fullname" name="fullname" type="text" placeholder="Exemple : Yao Konan">
+              <small class="error-message"></small>
             </div>
-        </div>
-    </header>
-
-    <main>
-        <section class="page-hero">
-            <div class="container">
-                <span class="tag">Inscription</span>
-                <h1>Réserver votre place</h1>
-                <p>Complétez le formulaire pour participer à un événement.</p>
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="nom@email.com">
+              <small class="error-message"></small>
             </div>
-        </section>
+          </div>
 
-        <section class="contact section">
-            <div class="container contact-grid">
-                <div class="contact-info">
-                    <h2>Informations</h2>
-                    <p>Email : contact@campusconnect.com</p>
-                    <p>Téléphone : +225 00 00 00 00 00</p>
-                    <p>Lieu : Campus universitaire</p>
-                </div>
-
-                <form id="registrationForm" class="contact-form">
-                    <div class="form-group">
-                        <label for="fullname">Nom complet</label>
-                        <input type="text" id="fullname" name="fullname" />
-                        <small class="error"></small>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" />
-                        <small class="error"></small>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="department">Filière</label>
-                        <input type="text" id="department" name="department" />
-                        <small class="error"></small>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="event">Événement</label>
-                        <select id="event" name="event">
-                            <option value="">Choisir un événement</option>
-                            <option value="conference">Conférence IA</option>
-                            <option value="atelier">Atelier Développement Web</option>
-                            <option value="hackathon">Hackathon Innovation</option>
-                        </select>
-                        <small class="error"></small>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="5"></textarea>
-                    </div>
-
-                    <button type="submit" class="btn btn-primary">Envoyer</button>
-                    <p id="formMessage" class="form-message"></p>
-                </form>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="department">Filière</label>
+              <input id="department" name="department" type="text" placeholder="Informatique, gestion, design...">
+              <small class="error-message"></small>
             </div>
-        </section>
-    </main>
+            <div class="form-field">
+              <label for="event">Événement</label>
+              <select id="event" name="event">
+                <option value="">Choisir un événement</option>
+                <option value="Data & IA responsable">Data & IA responsable</option>
+                <option value="Atelier UI Web Portfolio">Atelier UI Web Portfolio</option>
+                <option value="Hackathon Campus Build">Hackathon Campus Build</option>
+                <option value="Forum Orientation & Carrière">Forum Orientation & Carrière</option>
+              </select>
+              <small class="error-message"></small>
+            </div>
+          </div>
 
-    <footer class="footer">
-        <div class="container footer-content">
-            <p>CampusConnect © 2026</p>
-        </div>
-    </footer>
+          <div class="form-field">
+            <label for="message">Motivation</label>
+            <textarea id="message" name="message" rows="6" placeholder="Explique pourquoi tu veux participer."></textarea>
+            <small class="error-message"></small>
+          </div>
 
-    <script src="js/form.js"></script>
-    <script src="js/theme.js"></script>
-    <script src="js/main.js"></script>
+          <div class="form-actions">
+            <button class="btn btn-primary" type="submit">Envoyer la demande</button>
+            <p class="form-feedback" id="formMessage" aria-live="polite"></p>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>CampusConnect</h3>
+        <p>Projet statique front-end pour apprendre de manière structurée et professionnelle.</p>
+      </div>
+      <div>
+        <h4>Pages</h4>
+        <a href="index.html">Accueil</a>
+        <a href="events.html">Événements</a>
+      </div>
+      <div>
+        <h4>Focus</h4>
+        <p>Validation, feedback utilisateur et organisation du code.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" type="button" aria-label="Retour en haut">↑</button>
+
+  <script src="js/theme.js"></script>
+  <script src="js/form.js"></script>
+  <script src="js/main.js"></script>
 </body>
-
 </html>
