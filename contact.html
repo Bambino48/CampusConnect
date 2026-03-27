@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CampusConnect | Inscription</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+</head>
+
+<body>
+    <header class="header">
+        <div class="container navbar">
+            <a href="index.html" class="logo">CampusConnect</a>
+            <nav class="nav" id="navMenu">
+                <a href="index.html">Accueil</a>
+                <a href="events.html">Événements</a>
+                <a href="contact.html">Inscription</a>
+            </nav>
+            <div class="nav-actions">
+                <button id="themeToggle" class="btn btn-secondary">Mode</button>
+                <button id="menuToggle" class="menu-toggle">Menu</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <span class="tag">Inscription</span>
+                <h1>Réserver votre place</h1>
+                <p>Complétez le formulaire pour participer à un événement.</p>
+            </div>
+        </section>
+
+        <section class="contact section">
+            <div class="container contact-grid">
+                <div class="contact-info">
+                    <h2>Informations</h2>
+                    <p>Email : contact@campusconnect.com</p>
+                    <p>Téléphone : +225 00 00 00 00 00</p>
+                    <p>Lieu : Campus universitaire</p>
+                </div>
+
+                <form id="registrationForm" class="contact-form">
+                    <div class="form-group">
+                        <label for="fullname">Nom complet</label>
+                        <input type="text" id="fullname" name="fullname" />
+                        <small class="error"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" />
+                        <small class="error"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="department">Filière</label>
+                        <input type="text" id="department" name="department" />
+                        <small class="error"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="event">Événement</label>
+                        <select id="event" name="event">
+                            <option value="">Choisir un événement</option>
+                            <option value="conference">Conférence IA</option>
+                            <option value="atelier">Atelier Développement Web</option>
+                            <option value="hackathon">Hackathon Innovation</option>
+                        </select>
+                        <small class="error"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Envoyer</button>
+                    <p id="formMessage" class="form-message"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>CampusConnect © 2026</p>
+        </div>
+    </footer>
+
+    <script src="js/form.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

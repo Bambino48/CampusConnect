@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CampusConnect | Événements</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+</head>
+
+<body>
+    <header class="header">
+        <div class="container navbar">
+            <a href="index.html" class="logo">CampusConnect</a>
+            <nav class="nav" id="navMenu">
+                <a href="index.html">Accueil</a>
+                <a href="events.html">Événements</a>
+                <a href="contact.html">Inscription</a>
+            </nav>
+            <div class="nav-actions">
+                <button id="themeToggle" class="btn btn-secondary">Mode</button>
+                <button id="menuToggle" class="menu-toggle">Menu</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <span class="tag">Catalogue</span>
+                <h1>Explorer les événements</h1>
+                <p>Trouvez rapidement les activités qui correspondent à votre profil.</p>
+            </div>
+        </section>
+
+        <section class="filters section">
+            <div class="container">
+                <div class="filter-bar">
+                    <input type="text" id="searchInput" placeholder="Rechercher un événement..." />
+                    <select id="sortSelect">
+                        <option value="default">Trier par</option>
+                        <option value="date">Date</option>
+                        <option value="title">Titre</option>
+                    </select>
+                </div>
+
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-category="all">Tous</button>
+                    <button class="filter-btn" data-category="conference">Conférences</button>
+                    <button class="filter-btn" data-category="atelier">Ateliers</button>
+                    <button class="filter-btn" data-category="hackathon">Hackathons</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="events-list section">
+            <div class="container">
+                <div class="events-grid" id="eventsContainer">
+                    <!-- Injecté en JavaScript -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="modal" id="eventModal">
+        <div class="modal-content">
+            <button class="modal-close" id="closeModal">×</button>
+            <div id="modalBody">
+                <!-- Détail injecté en JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>CampusConnect © 2026</p>
+        </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/events.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
